@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Gráficos</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Generar Gráfico</h1>
+    <form id="graficoForm">
+        <label for="tipoGrafico">Tipo de Gráfico:</label>
+        <select id="tipoGrafico" name="tipoGrafico">
+            <option value="">Seleccione un tipo de gráfico</option>
+            <option value="bar">Barras</option>
+            <option value="line">Líneas</option>
+            <option value="pie">Tarta</option>
+        </select>
+    </form>
+
+    <form id="votosForm">
+        <label for="presidente">Presidente:</label>
+        <select id="presidente" name="presidente" required>
+            <option value="">Seleccione un presidente</option>
+            <option value="Presidente A">Presidente A</option>
+            <option value="Presidente B">Presidente B</option>
+            <option value="Presidente C">Presidente C</option>
+        </select>
+
+        <label for="region">Región:</label>
+        <input type="text" id="region" name="region" required>
+
+        <label for="votos">Votos:</label>
+        <input type="number" id="votos" name="votos" required>
+
+        <button type="button" id="agregarDatos">Agregar al Gráfico</button>
+        <button type="button" id="generarGraficoGeneral">Generar Gráfico General</button>
+        <button type="button" id="volverPrincipal">Volver a la Página Principal</button>
+    </form>
+
+    <div id="chartContainer">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <div id="botonesGrafico" style="display: none;">
+        <button type="button" id="mostrarGraficoGeneral">Mostrar Gráfico General</button>
+        <button type="button" id="cambiarTipoGrafico">Cambiar Tipo de Gráfico</button>
+        <button type="button" id="mostrarGraficoPorRegiones">Mostrar Gráfico por Regiones</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
